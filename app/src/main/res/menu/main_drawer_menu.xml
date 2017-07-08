@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/mainDrawer.test1"
-        android:title="test1"/>
 
     <item
-        android:id="@+id/mainDrawer.test2"
-        android:title="test2"/>
+        android:id="@+id/main.drawer.fav"
+        android:title="Ulubione"
+        android:icon="@drawable/ic_favorite_black_24dp"/>
+
+
+    <item
+        android:id="@+id/main.drawer.homeBar"
+        android:icon="@drawable/ic_bottle_black_24dp"
+        android:title="Twój barek"/>
+
+    <item
+        android:id="@+id/main.drawer.menu.cart"
+        android:title="Lista zakupów"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"/>
+
+    <item
+        android:id="@+id/main.drawer.menu.settings"
+        android:title="Ustawienia"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+
+    <item
+        android:id="@+id/main.drawer.menu.logout"
+        android:icon="@drawable/ic_logout_dark_24dp"
+        android:title="Wyloguj"/>
 </menu>
