@@ -13,6 +13,22 @@
         android:icon="@drawable/ic_bottle_black_24dp"
         android:title="Twój barek"/>
 
+
+    <item
+        android:id="@+id/main.drawer.addNewDrink"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="Dodaj nowego drinka"/>
+
+    <item
+        android:id="@+id/main.drawer.searchDrink"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Szukaj"/>
+
+    <item
+        android:id="@+id/main.drawer.filterDrinkList"
+        android:icon="@drawable/ic_filter_list_black_24dp"
+        android:title="Filtruj"/>
+
     <item
         android:id="@+id/main.drawer.menu.cart"
         android:title="Lista zakupów"
