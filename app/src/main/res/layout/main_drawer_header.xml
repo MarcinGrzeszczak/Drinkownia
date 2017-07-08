@@ -22,28 +22,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         android:layout_centerVertical="true">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
         android:id="@+id/main.drawer.userPic"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
 
         app:civ_border_width="2dp"
         app:civ_border_color="#ffffff" />
 
 
         <com.martiproduction.drinkownia.CustomViews.CustomTextView
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="left"
             android:id="@+id/main.drawer.userName"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:external_font="fonts/sansation/Sansation-Bold.ttf"
             android:textColor="@color/colorText"
-            android:textSize="28sp"
+            android:textSize="26sp"
             android:text="Deadpool"/>
     </LinearLayout>
 </RelativeLayout>
