@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <declare-styleable name="CustomTextView">
+
+        <attr name="external_font" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomBubblesAnimation">
+
+        <attr name="colorBackground" format="color"/>
+        <attr name="bubbleQuantity" format="integer"/>
+        <attr name="bubbleMinSize" format="float"/>
+        <attr name="bubbleMaxSize" format="float"/>
+        <attr name="bubbleMinAcceleration" format="float"/>
+        <attr name="bubbleMaxAcceleration" format="float"/>
+        <attr name="bubbleSpeed" format="float"/>
+
+    </declare-styleable>
+
+</resources>

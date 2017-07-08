@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.martiproduction.drinkownia.CustomViews.CustomTextView
+        android:layout_marginLeft="@dimen/fragment_margin"
+        android:layout_marginStart="@dimen/fragment_margin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="SZKŁO"
+        android:textColor="@color/colorTitleTextDetails"
+        app:external_font="fonts/Titillium/Titillium-Bold.otf"
+        android:textSize="@dimen/details_title_text"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/list_margin">
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+
+        android:text="Nazwa szkła"
+        android:textSize="20sp"
+        android:id="@+id/glasstype_text"/>
+
+    <ImageView
+        android:layout_marginRight="30dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/glasstype_image"
+        android:src="@drawable/coctail_glass"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

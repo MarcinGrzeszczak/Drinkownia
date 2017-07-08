@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragmentBackground"
+    android:layout_marginTop="@dimen/list_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/title_drink_pic"
+        android:layout_marginLeft="@dimen/fragment_margin"
+        android:layout_marginStart="@dimen/fragment_margin"
+        android:layout_marginTop="@dimen/fragment_margin"
+        android:layout_width="@dimen/photo_recipe_size"
+        android:layout_height="@dimen/photo_recipe_size"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/title_favourite_btn"
+            android:layout_toStartOf="@+id/title_favourite_btn"
+            android:gravity="center_horizontal">
+
+            <com.martiproduction.drinkownia.CustomViews.CustomTextView
+                android:id="@+id/title_drink_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_margin"
+                android:textColor="@color/blackColorText"
+                android:textSize="@dimen/title_drink_text_size"
+                android:textStyle="bold"
+                android:text="TXT"
+                app:external_font="fonts/sansation/Sansation-Bold.ttf"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="autor" />
+
+
+            <RatingBar
+                style="@style/CustomRatingBar"
+                android:id="@+id/title_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3"
+                android:max="5"/>
+
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite_border_purple_36dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:id="@+id/title_favourite_btn" />
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

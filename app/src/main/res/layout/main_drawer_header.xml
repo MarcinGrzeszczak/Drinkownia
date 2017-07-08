@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <com.martiproduction.drinkownia.CustomViews.CustomBubblesAnimation
+        android:id="@+id/main.drawer.header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorBackground="@color/itemColor"
+        app:bubbleQuantity="5"
+        app:bubbleMinSize="4"
+        app:bubbleMaxSize="10"
+        app:bubbleMinAcceleration="0.5"
+        app:bubbleMaxAcceleration="0.5"
+        app:bubbleSpeed="0.5"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/main.drawer.userPic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ffffff"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

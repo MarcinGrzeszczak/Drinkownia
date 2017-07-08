@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fragment_height"
+    xmlns:f="http://schemas.android.com/tools"
+    android:background="@color/fragmentBackground"
+    android:fillViewport="true"
+    android:layout_marginBottom="@dimen/list_margin">
+
+    <org.apmem.tools.layouts.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/fragment_tags_root_view"
+        f:layout_newLine="true"/>
+
+</ScrollView>

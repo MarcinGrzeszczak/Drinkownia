@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Drinkownia</string>
+    <string name="login">Zaloguj się</string>
+    <string name="register">Załóż konto</string>
+    <string name="not_registered">Nie masz jeszcze konta ?</string>
+    <string name="facebook_login">Zaloguj przez facebook</string>
+    <string name="hello_text">Witaj!</string>
+    <string name="hello_text_2">Zaloguj się do aplikacji.</string>
+    <string name="login_login">Zaloguj</string>
+    <string name="login_hint">Login</string>
+    <string name="password_hint">Hasło</string>
+
+    <string-array name="navigation_drawer_menu">
+        <item>Zaloguj</item>
+        <item>Opcje</item>
+        <item>Dodaj drink</item>
+        <item>Wyszukaj</item>
+        <item>Wyjście</item>
+    </string-array>
+
+
+
+    <string name="open_main_drawer">Open Navigation Drawer</string>
+    <string name="close_main_drawer">Close Navigation Drawer</string>
+</resources>

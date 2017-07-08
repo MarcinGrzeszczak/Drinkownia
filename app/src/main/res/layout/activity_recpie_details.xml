@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_recpie_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.martiproduction.drinkownia.UI.RecipeDetails">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/details_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/details_collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/details.toolbar"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_collapseMode="pin">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/details.toolbar.drinkImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#ffffff" />
+
+                <com.martiproduction.drinkownia.CustomViews.CustomTextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/details.toolbar.title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    app:external_font="fonts/sansation/Sansation-Bold.ttf"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:id="@+id/details.expandedToolbarContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.martiproduction.drinkownia.CustomViews.CustomBubblesAnimation
+                    android:id="@+id/details.expandedToolbarContent.bubbleAnimation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:colorBackground="@color/itemColor"
+                    app:bubbleQuantity="5"
+                    app:bubbleMinSize="4"
+                    app:bubbleMaxSize="10"
+                    app:bubbleMinAcceleration="0.5"
+                    app:bubbleMaxAcceleration="0.5"
+                    app:bubbleSpeed="0.5"/>
+
+                <LinearLayout
+                    android:id="@+id/details.expandedToolbarContent.title"
+                    android:layout_marginTop="-10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/details.expandedToolbarContent.title.drinkImage"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#ffffff" />
+
+                        <com.martiproduction.drinkownia.CustomViews.CustomTextView
+                            android:id="@+id/details.expandedToolbarContent.title.drinkName"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:external_font="fonts/sansation/Sansation-Bold.ttf"
+                            android:textColor="@color/colorText"
+                            android:textSize="32sp"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_account_circle_purple_500_48dp"/>
+
+                <com.martiproduction.drinkownia.CustomViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nick autora"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    app:external_font="fonts/sansation/Sansation-Bold.ttf"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="10dp"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/details_glassType_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </android.support.v7.widget.CardView>
+
+           <android.support.v7.widget.CardView
+               android:layout_marginTop="10dp"
+
+               android:layout_marginLeft="10dp"
+               android:layout_marginStart="10dp"
+
+               android:layout_marginRight="10dp"
+               android:layout_marginEnd="10dp"
+
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <FrameLayout
+                   android:id="@+id/details_ingredients_fragment"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+
+           </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/details_directions_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/details_tags_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+  <android.support.design.widget.FloatingActionButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_favorite_border_purple_36dp"
+      android:layout_margin="10dp"
+      app:layout_anchor="@id/details_appBar"
+      app:layout_anchorGravity="bottom|right|end"
+      />
+</android.support.design.widget.CoordinatorLayout>

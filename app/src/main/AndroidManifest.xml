@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.martiproduction.drinkownia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/MainTheme"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".UI.Start"
+            android:theme="@style/LoginTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UI.Login"
+            android:animateLayoutChanges="true"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UI.Registration"
+            android:animateLayoutChanges="true"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".UI.Main"
+            android:animateLayoutChanges="true"
+            android:theme="@style/LoginTheme"/>
+
+        <activity android:name=".UI.RecipeDetails"
+            android:theme="@style/LoginTheme"/>
+    </application>
+
+</manifest>

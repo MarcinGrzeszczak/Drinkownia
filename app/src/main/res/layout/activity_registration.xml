@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/login_view_padding_2"
+    android:paddingLeft="@dimen/login_view_padding_2"
+    android:paddingRight="@dimen/login_view_padding_2"
+    android:paddingTop="@dimen/login_view_padding_3"
+    tools:context="com.martiproduction.drinkownia.UI.Registration"
+    android:background="@color/colorBackground">
+
+    <EditText
+        android:id="@+id/registration_login"
+        android:layout_marginBottom="@dimen/login_view_padding_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Login"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:gravity="center"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        />
+
+    <EditText
+        android:id="@+id/registration_password"
+        android:layout_marginBottom="@dimen/login_view_padding_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hasło"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:gravity="center"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:imeOptions="actionNext"
+        />
+
+    <EditText
+        android:id="@+id/registration_rep_password"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Powtórz hasło"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:gravity="center"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:imeOptions="actionNext"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_login_height"
+        android:background="@color/colorButtonLogin"
+        android:text="Załóż konto"
+        />
+
+</LinearLayout>
