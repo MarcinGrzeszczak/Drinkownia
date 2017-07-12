@@ -19,7 +19,7 @@
         app:bubbleSpeed="0.5"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="10dp"
@@ -27,9 +27,7 @@
         android:layout_centerVertical="true">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_gravity="left"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
+            android:layout_gravity="center_horizontal"
         android:id="@+id/main.drawer.userPic"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -41,6 +39,8 @@
         <com.martiproduction.drinkownia.CustomViews.CustomTextView
             android:layout_gravity="left"
             android:id="@+id/main.drawer.userName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
