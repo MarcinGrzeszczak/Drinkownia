@@ -1,6 +1,8 @@
 package com.martiproduction.drinkownia.UI;
 
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.martiproduction.drinkownia.CustomViews.NavigationDrawerHeaderMain;
@@ -56,6 +59,7 @@ public class Main extends AppCompatActivity implements DrawerLayout.DrawerListen
         header = new NavigationDrawerHeaderMain(this);
 
         navigationView.addHeaderView(header);
+        navigationView.setNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
         header.setPause(true);
 
@@ -85,4 +89,16 @@ public class Main extends AppCompatActivity implements DrawerLayout.DrawerListen
     public void onDrawerStateChanged(int newState) {
      //   header.setPause(true);
     }
+
+    NavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new NavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()){
+                case R.id.main_drawer_addNewDrink:
+                    startActivity(new Intent(Main.this,AddRecipe.class));
+            }
+            return true;
+        }
+    };
 }
