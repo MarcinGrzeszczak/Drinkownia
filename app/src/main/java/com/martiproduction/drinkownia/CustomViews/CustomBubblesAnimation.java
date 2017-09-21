@@ -3,10 +3,8 @@ package com.martiproduction.drinkownia.CustomViews;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -25,7 +23,6 @@ public class CustomBubblesAnimation extends SurfaceView implements Runnable,Surf
     private Boolean canDraw,firstRun,manualPause;
     private Canvas canvas;
     private Bubbles bubbles;
-    private Drawable background;
 
 
     public CustomBubblesAnimation(Context context) {

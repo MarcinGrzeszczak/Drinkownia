@@ -9,9 +9,10 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.martiproduction.drinkownia.R;
 import com.martiproduction.drinkownia.core.RecipeInfo;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class RecipesListAdapter extends RecyclerView.Adapter<RecipesListAdapter.
 
 
     public void setOnClickListener(OnClickListener onClickListener) {
-        this.onClickListener = onClickListener;
+        RecipesListAdapter.onClickListener = onClickListener;
     }
 
     public RecipesListAdapter(List<RecipeInfo> recipeInfoList, RecyclerView recyclerView){
@@ -71,10 +72,10 @@ public class RecipesListAdapter extends RecyclerView.Adapter<RecipesListAdapter.
 
     @Override
     public void onBindViewHolder(RecipesListAdapter.ViewHolder holder, int position) {
-        Picasso
+        Glide
                 .with(context)
                 .load(recipeInfoList.get(position).getPicSrc())
-                .resize(80,80).centerCrop()
+                .apply(new RequestOptions().override(80,80).centerCrop())
                 .into(holder.drinkPicture);
 
          /*

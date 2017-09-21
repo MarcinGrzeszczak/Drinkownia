@@ -5,8 +5,10 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.martiproduction.drinkownia.R;
-import com.squareup.picasso.Picasso;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,11 +41,10 @@ public class NavigationDrawerHeaderMain extends LinearLayout {
     private void init(){
         inflate(getContext(),R.layout.main_drawer_header,this);
         ButterKnife.bind(this);
-        Picasso
+        Glide
                 .with(getContext())
                 .load("http://nerdist.com/wp-content/uploads/2016/10/20161025_n_nerdistnews_deadpool2director_1x1.jpg")
-                .centerCrop()
-                .resize(100,100)
+                .apply(new RequestOptions().centerCrop().override(100,100))
                 .into(userPicture);
     }
 

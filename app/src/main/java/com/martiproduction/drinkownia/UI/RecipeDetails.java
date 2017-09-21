@@ -13,6 +13,8 @@ import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.martiproduction.drinkownia.CustomViews.CustomBubblesAnimation;
 import com.martiproduction.drinkownia.CustomViews.CustomTextView;
 import com.martiproduction.drinkownia.Fragments.RecipeDetailsDirections;
@@ -21,7 +23,7 @@ import com.martiproduction.drinkownia.Fragments.RecipeDetailsIngredients;
 import com.martiproduction.drinkownia.Fragments.RecipeDetailsTags;
 import com.martiproduction.drinkownia.R;
 import com.martiproduction.drinkownia.core.RecipeInfo;
-import com.squareup.picasso.Picasso;
+
 
 public class RecipeDetails extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
 
@@ -72,23 +74,24 @@ public class RecipeDetails extends AppCompatActivity implements AppBarLayout.OnO
 
         ImageView imageView = (ImageView) findViewById(R.id.details_expandedToolbarContent_title_drinkImage);
         CustomTextView drinkName = (CustomTextView) findViewById(R.id.details_expandedToolbarContent_title_drinkName);
-
+        
 
         drinkName.setText(recipeInfo.getName());
         smallDrinkName.setText(recipeInfo.getName());
 
 
-
-        Picasso.with(this)
-                .load(recipeInfo.getPicSrc())
+        RequestOptions requestOptions = new RequestOptions()
                 .centerCrop()
-                .resize(100,100)
+                .override(100,100);
+
+        Glide.with(this)
+                .load(recipeInfo.getPicSrc())
+                .apply(requestOptions)
                 .into(imageView);
 
-        Picasso.with(this)
+        Glide.with(this)
                 .load(recipeInfo.getPicSrc())
-                .centerCrop()
-                .resize(100,100)
+                .apply(requestOptions)
                 .into(smallImageView);
 
 

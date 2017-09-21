@@ -10,13 +10,7 @@
     <string name="login_hint">Login</string>
     <string name="password_hint">Hasło</string>
 
-    <string-array name="navigation_drawer_menu">
-        <item>Zaloguj</item>
-        <item>Opcje</item>
-        <item>Dodaj drink</item>
-        <item>Wyszukaj</item>
-        <item>Wyjście</item>
-    </string-array>
+    <string name="addDrink_add_picture">1. Zrób zdjęcie</string>
 
 
     <string name="open_main_drawer">Open Navigation Drawer</string>

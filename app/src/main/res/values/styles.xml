@@ -31,4 +31,11 @@
             <item name="android:maxHeight">24dip</item>
         </style>
 
+
+    <style name="PopupAnimationStyle" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/popup_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit_anim</item>
+
+    </style>
+
 </resources>
