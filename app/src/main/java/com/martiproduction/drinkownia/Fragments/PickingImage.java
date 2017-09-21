@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,8 +55,8 @@ public class PickingImage extends Fragment implements LoaderManager.LoaderCallba
 
         if(mReadPermission) {
              mPickingImageAdapter = new PickingImageAdapter();
+             mPickingRecycler.setAdapter(mPickingImageAdapter);
              getLoaderManager().initLoader(0,null,this);
-            mPickingRecycler.setAdapter(mPickingImageAdapter);
         }
         return view;
     }
@@ -76,18 +77,18 @@ public class PickingImage extends Fragment implements LoaderManager.LoaderCallba
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         String[] projection = {MediaStore.Images.Media.DATA};
-        Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+        Uri uri = MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI;
         return new CursorLoader(getActivity(),uri,projection,null,null,null);
     }
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
-        mPickingImageAdapter.addCursor(cursor);
+        mPickingImageAdapter.changeCursor(cursor);
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-        mPickingImageAdapter.addCursor(null);
+        mPickingImageAdapter.changeCursor(null);
     }
 
 

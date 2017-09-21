@@ -34,6 +34,9 @@ public class AddRecipePicture extends Fragment {
     @BindView(R.id.addPicture_circlePreview)
     TextureView circlePreview;
 
+    @BindView(R.id.addPicture_takePictureButton)
+    FloatingActionButton takePictureButton;
+
     @Override
     public void onPause() {
         if(mCameraV2 != null)
@@ -80,17 +83,17 @@ public class AddRecipePicture extends Fragment {
         this.mPickingImageListener = pickingImageListener;
     }
 
-/*
+
     @OnClick(R.id.addPicture_pickPictureButton)
     public void pickPictureButton(){
         mPickingImageListener.buttonClicked();
     }
 
-*/
+
     private void openCamera(boolean permission){
         if (!permission){
             Log.d(getActivity().getLocalClassName(),"DUMMY PICTURE");
-          //  takePictureButton.setEnabled(false);
+            takePictureButton.setEnabled(false);
             }
         else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.martiproduction.drinkownia.R;
 
 import java.io.File;
@@ -21,7 +22,7 @@ import java.util.List;
 
 public class PickingImageAdapter extends RecyclerView.Adapter<PickingImageAdapter.PickingImageHolder> {
 
-    private Cursor mImages;
+    private Cursor mCursor;
     private Context mContext;
 
     class PickingImageHolder extends RecyclerView.ViewHolder {
@@ -35,7 +36,6 @@ public class PickingImageAdapter extends RecyclerView.Adapter<PickingImageAdapte
 
     public PickingImageAdapter() {}
 
-    public void addCursor(Cursor data){ this.mImages = data; }
 
     @Override
     public PickingImageHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -46,16 +46,35 @@ public class PickingImageAdapter extends RecyclerView.Adapter<PickingImageAdapte
 
     @Override
     public void onBindViewHolder(PickingImageHolder holder, int position) {
-       // mImages.move(position);
+        mCursor.moveToPosition(position);
         Glide.with(mContext)
-                .load(mImages.getString(0))
+                .load(mCursor.getString(0))
                 .into(holder.image);
     }
 
     @Override
     public int getItemCount() {
-        return mImages.getCount();
+        if(mCursor != null)
+            return mCursor.getCount();
+        return 0;
     }
 
+    public void changeCursor(Cursor cursor){
+        Cursor oldCursor = swapCursor(cursor);
 
+        if(oldCursor != null)
+            oldCursor.close();
+    }
+
+    private Cursor swapCursor(Cursor cursor){
+        if(cursor == mCursor)
+            return null;
+        Cursor oldCursor = mCursor;
+        mCursor = cursor;
+
+        if(cursor != null)
+            this.notifyDataSetChanged();
+
+        return oldCursor;
+    }
 }
