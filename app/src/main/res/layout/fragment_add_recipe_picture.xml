@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:background="@color/cardview_light_background"
     android:layout_margin="16dp"
     android:layout_height="match_parent">
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addPicture.takePictureButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="bottom|center"
-        android:clickable="true"
-        android:backgroundTint="@color/itemColor"
-        android:src="@drawable/ic_photo_camera_white_36dp"
-        android:layout_margin="10dp"/>
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addPicture.pickPictureButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom|start"
-        android:backgroundTint="@color/itemColor"
-        android:src="@drawable/ic_add_a_photo_white_36dp"
-        android:layout_margin="10dp"/>
-
 
    <FrameLayout
        android:layout_width="305dp"
@@ -45,5 +26,30 @@
       />
 
    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPicture.takePictureButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|center"
+        android:clickable="true"
+        app:backgroundTint="@color/itemColor"
+        android:src="@drawable/ic_photo_camera_white_36dp"
+        android:layout_margin="10dp"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPicture.pickPictureButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|start"
+        app:backgroundTint="@color/itemColor"
+        android:src="@drawable/ic_add_a_photo_white_36dp"
+        android:layout_margin="10dp"/>
+
+
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

@@ -49,8 +49,8 @@ public class CameraV2 {
     }
 
     public void pause() {
-        stopCameraHandler();
         stopCamera();
+        stopCameraHandler();
     }
 
 
