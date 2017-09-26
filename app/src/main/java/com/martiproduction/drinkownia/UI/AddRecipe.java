@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.martiproduction.drinkownia.Fragments.AddRecipePicture;
 import com.martiproduction.drinkownia.Fragments.PickingImage;
@@ -15,14 +16,18 @@ import com.martiproduction.drinkownia.R;
 
 import java.util.Objects;
 
+import butterknife.BindView;
+
 public class AddRecipe extends AppCompatActivity {
 
-    private final int PERMISSIONS = 1;
-
-    private boolean mCameraPermissionGranted, mReadPermissionGranted;
-
-    private FragmentTransaction fragmentTransaction;
     private static final int CONTAINER = R.id.addRecipe_fragment_container;
+
+    private final int PERMISSIONS = 1;
+    private boolean mCameraPermissionGranted, mReadPermissionGranted;
+    private FragmentTransaction fragmentTransaction;
+
+    @BindView(R.id.addRecipe_toolbar)
+    Toolbar mAddRecipeToolbar;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -46,7 +51,7 @@ public class AddRecipe extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
-
+        setSupportActionBar(mAddRecipeToolbar);
         checkPermissions();
     }
 

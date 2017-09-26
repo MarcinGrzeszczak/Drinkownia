@@ -49,7 +49,8 @@ public class PickingImage extends Fragment implements LoaderManager.LoaderCallba
         View view = inflater.inflate(R.layout.fragment_picking_image,container,false);
         bind = ButterKnife.bind(this,view);
 
-        RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(3,1);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        layoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
 
         mPickingRecycler.setLayoutManager(layoutManager);
 
@@ -76,8 +77,8 @@ public class PickingImage extends Fragment implements LoaderManager.LoaderCallba
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        String[] projection = {MediaStore.Images.Media.DATA};
-        Uri uri = MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI;
+        String[] projection = { MediaStore.Images.Media.DATA};
+        Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
         return new CursorLoader(getActivity(),uri,projection,null,null,null);
     }
 

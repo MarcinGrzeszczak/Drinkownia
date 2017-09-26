@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.martiproduction.drinkownia.R;
 import com.martiproduction.drinkownia.core.CameraV2;
+import com.martiproduction.drinkownia.core.RecipePictureListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,11 +23,11 @@ import butterknife.Unbinder;
  * Created by marcin on 13.07.2017.
  */
 
-public class AddRecipePicture extends Fragment {
+public class AddRecipePicture extends Fragment implements RecipePictureListener{
 
     private boolean mCameraPermissionGranted;
     private Unbinder bind;
-    private PopupTitle mPopupTitle;
+  //  private PopupTitle mPopupTitle;
     private View mView;
     private CameraV2 mCameraV2;
     private PickingImage.Listener mPickingImageListener;
@@ -49,7 +50,7 @@ public class AddRecipePicture extends Fragment {
     @Override
     public void onDestroy() {
         bind.unbind();
-        mPopupTitle.destroy();
+    //    mPopupTitle.destroy();
         super.onDestroy();
     }
 
@@ -66,9 +67,9 @@ public class AddRecipePicture extends Fragment {
     public void onResume() {
         super.onResume();
 
-        mPopupTitle = new PopupTitle(getActivity().getApplicationContext(),mView);
+    //    mPopupTitle = new PopupTitle(getActivity().getApplicationContext(),mView);
         mView.post(() -> {
-            mPopupTitle.show(getString(R.string.addDrink_add_picture),5);
+      //      mPopupTitle.show(getString(R.string.addDrink_add_picture),5);
             openCamera(mCameraPermissionGranted);
 
         });
@@ -107,5 +108,12 @@ public class AddRecipePicture extends Fragment {
                 }
             }
         }
+    }
+
+
+
+    @Override
+    public void getPicture(byte[] picture) {
+
     }
 }

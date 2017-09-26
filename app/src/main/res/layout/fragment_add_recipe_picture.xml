@@ -4,10 +4,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/cardview_light_background"
-    android:layout_margin="16dp"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addRecipe.toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:textColor="@color/colorText"
+            android:text="@string/addDrink_add_picture"/>
+
+    </android.support.v7.widget.Toolbar>
+
    <FrameLayout
+       android:layout_margin="16dp"
        android:layout_width="305dp"
        android:layout_height="305dp"
        android:layout_gravity="center"
@@ -31,11 +47,12 @@
         android:id="@+id/addPicture.takePictureButton"
         android:layout_width="70dp"
         android:layout_height="70dp"
+
         android:layout_gravity="bottom|center"
         android:clickable="true"
         app:backgroundTint="@color/itemColor"
         android:src="@drawable/ic_photo_camera_white_36dp"
-        android:layout_margin="10dp"/>
+        android:layout_margin="26dp"/>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -45,8 +62,7 @@
         android:layout_gravity="bottom|start"
         app:backgroundTint="@color/itemColor"
         android:src="@drawable/ic_add_a_photo_white_36dp"
-        android:layout_margin="10dp"/>
-
+        android:layout_margin="26dp"/>
 
 
 
